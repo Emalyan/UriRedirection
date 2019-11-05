@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\tsconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Properties\PublishProfiles\UriReductionAPI20180326022034 - Web Deploy.pubxml" />
+    <None Remove="Properties\PublishProfiles\UriReductionAPI20180326023138 - Web Deploy.pubxml" />
+    <None Remove="Properties\PublishProfiles\UriReductionAPI20180326024047 - Web Deploy.pubxml" />
+    <None Remove="Properties\PublishProfiles\UriReductionAPI20180326123703 - Web Deploy.pubxml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CloudinaryDotNet" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
+    <PackageReference Include="NSwag.AspNetCore" Version="11.16.1" />
+    <PackageReference Include="React.AspNet" Version="3.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UriReduction.Data\UriReduction.Data.csproj" />
+    <ProjectReference Include="..\UriReduction.Models\UriReduction.Models.csproj" />
+    <ProjectReference Include="..\UriReduction.Services\UriReduction.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+
+</Project>
